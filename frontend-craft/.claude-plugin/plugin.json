@@ -1,0 +1,20 @@
+{
+  "name": "frontend-craft",
+  "version": "1.0.0",
+  "description": "Frontend polish and UX feedback: CSS @layer architecture, loading indicators, view transitions, optimistic updates with morphing, and frame spinners.",
+  "author": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "repository": "https://github.com/rubygrowthlabs/rgl-rails",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "ux",
+    "loading",
+    "transitions",
+    "animations",
+    "frontend",
+    "view-transitions"
+  ]
+}

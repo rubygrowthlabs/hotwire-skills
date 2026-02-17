@@ -1,0 +1,20 @@
+{
+  "name": "turbo-navigation",
+  "version": "1.0.0",
+  "description": "Turbo Drive and Turbo Frames for navigation: caching, tabbed navigation, pagination, lazy loading, faceted search, and Turbo 8 page refresh.",
+  "author": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "repository": "https://github.com/rubygrowthlabs/rgl-rails",
+  "license": "MIT",
+  "keywords": [
+    "turbo",
+    "frames",
+    "drive",
+    "navigation",
+    "pagination",
+    "lazy-loading",
+    "cache"
+  ]
+}

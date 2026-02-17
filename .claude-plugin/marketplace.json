@@ -1,0 +1,97 @@
+{
+  "name": "rgl-rails",
+  "owner": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "metadata": {
+    "description": "Rails 8 + Full Hotwire Stack skills plugin. 7 domain-scoped skills covering architecture, Turbo navigation, Turbo Streams, Stimulus, forms, Hotwire Native, and frontend craft.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "rails-architecture",
+      "description": "DHH-style Rails architecture: fat models, thin controllers, concerns, REST resource mapping, Minitest, and Rails 8 defaults.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["rails", "architecture", "dhh", "controllers", "models", "concerns", "minitest"],
+      "source": "./rails-architecture"
+    },
+    {
+      "name": "turbo-navigation",
+      "description": "Turbo Drive and Turbo Frames for navigation: caching, tabbed navigation, pagination, lazy loading, faceted search, and Turbo 8 page refresh.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["turbo", "frames", "drive", "navigation", "pagination", "lazy-loading"],
+      "source": "./turbo-navigation"
+    },
+    {
+      "name": "turbo-streams",
+      "description": "Turbo Streams for real-time updates: inline streams, custom actions, broadcasting, Turbo 8 morphing, optimistic UI, and view transitions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["turbo-streams", "broadcasting", "morphing", "real-time", "websocket"],
+      "source": "./turbo-streams"
+    },
+    {
+      "name": "stimulus-controllers",
+      "description": "Stimulus controller fundamentals: lifecycle, values, targets, outlets, action parameters, production patterns, and Core Web Vitals.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["stimulus", "controllers", "javascript", "lifecycle", "values", "targets"],
+      "source": "./stimulus-controllers"
+    },
+    {
+      "name": "forms-validation",
+      "description": "Form handling with Hotwire: inline editing, modal validation, typeahead search, external forms, and the form submission lifecycle.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["forms", "validation", "inline-edit", "typeahead", "modal"],
+      "source": "./forms-validation"
+    },
+    {
+      "name": "hotwire-native",
+      "description": "Hotwire Native for iOS and Android: Turbo Native setup, path configuration, Strada bridge components, native navigation, authentication, and Rails backend integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["hotwire-native", "turbo-ios", "turbo-android", "strada", "bridge-components", "mobile"],
+      "source": "./hotwire-native"
+    },
+    {
+      "name": "frontend-craft",
+      "description": "Frontend polish and UX feedback: CSS @layer architecture, loading indicators, view transitions, optimistic updates with morphing, and frame spinners.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ruby Growth Labs",
+        "url": "https://github.com/rubygrowthlabs"
+      },
+      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "tags": ["css", "ux", "loading", "transitions", "animations", "frontend"],
+      "source": "./frontend-craft"
+    }
+  ]
+}

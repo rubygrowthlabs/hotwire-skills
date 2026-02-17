@@ -1,0 +1,22 @@
+{
+  "name": "rails-architecture",
+  "version": "1.0.0",
+  "description": "DHH-style Rails architecture: fat models, thin controllers, concerns, REST resource mapping, Minitest, and Rails 8 defaults.",
+  "author": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "repository": "https://github.com/rubygrowthlabs/rgl-rails",
+  "license": "MIT",
+  "keywords": [
+    "rails",
+    "architecture",
+    "dhh",
+    "controllers",
+    "models",
+    "concerns",
+    "minitest",
+    "fixtures",
+    "rest"
+  ]
+}

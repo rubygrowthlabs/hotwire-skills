@@ -1,0 +1,20 @@
+{
+  "name": "stimulus-controllers",
+  "version": "1.0.0",
+  "description": "Stimulus controller fundamentals: lifecycle, values, targets, outlets, action parameters, production patterns, and Core Web Vitals.",
+  "author": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "repository": "https://github.com/rubygrowthlabs/rgl-rails",
+  "license": "MIT",
+  "keywords": [
+    "stimulus",
+    "controllers",
+    "javascript",
+    "lifecycle",
+    "values",
+    "targets",
+    "outlets"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "turbo-streams",
+  "version": "1.0.0",
+  "description": "Turbo Streams for real-time updates: inline streams, custom actions, broadcasting, Turbo 8 morphing, optimistic UI, and view transitions.",
+  "author": {
+    "name": "Ruby Growth Labs",
+    "url": "https://github.com/rubygrowthlabs"
+  },
+  "repository": "https://github.com/rubygrowthlabs/rgl-rails",
+  "license": "MIT",
+  "keywords": [
+    "turbo-streams",
+    "broadcasting",
+    "morphing",
+    "real-time",
+    "websocket",
+    "action-cable"
+  ]
+}
