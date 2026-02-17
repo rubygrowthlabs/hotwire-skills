@@ -1,7 +1,7 @@
 {
   "name": "hotwire-native",
   "version": "1.1.0",
-  "description": "Hotwire Native for iOS and Android: Turbo Native setup, path configuration, Strada bridge components, native navigation, authentication, and Rails backend integration.",
+  "description": "Hotwire Native for iOS and Android: Turbo Native setup, path configuration, bridge components, native navigation, authentication, and Rails backend integration.",
   "author": {
     "name": "Ruby Growth Labs",
     "url": "https://github.com/rubygrowthlabs"
@@ -12,7 +12,6 @@
     "hotwire-native",
     "turbo-ios",
     "turbo-android",
-    "strada",
     "bridge-components",
     "mobile",
     "native"

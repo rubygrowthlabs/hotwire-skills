@@ -1,23 +1,22 @@
 ---
-title: "Strada Bridge Components"
+title: "Bridge Components"
 categories:
   - hotwire-native
-  - strada
   - bridge
 tags:
-  - strada
   - bridge-component
   - web-to-native
   - javascript
   - swift
   - kotlin
 description: >-
-  Two-way communication between web JavaScript and native Swift/Kotlin with Strada
-  bridge components: JavaScript BridgeComponent class, iOS and Android native handlers,
-  message format and lifecycle, platform detection, and component registration patterns.
+  Two-way communication between web JavaScript and native Swift/Kotlin with
+  bridge components: JavaScript BridgeComponent class, iOS and Android native
+  handlers, message format and lifecycle, platform detection, and component
+  registration patterns.
 ---
 
-# Strada Bridge Components
+# Bridge Components
 
 ## Table of Contents
 
@@ -38,7 +37,7 @@ description: >-
 
 ## Overview
 
-Strada provides a bridge for two-way communication between your web application's JavaScript and the native Swift (iOS) or Kotlin (Android) code. It enables web pages to request native UI elements (share sheets, native menus, haptic feedback) and native code to send data back to the web page.
+Bridge components provide two-way communication between your web application's JavaScript and the native Swift (iOS) or Kotlin (Android) code. They are built into Hotwire Native and require no additional dependencies beyond the web bridge library. Bridge components enable web pages to request native UI elements (share sheets, native menus, haptic feedback) and native code to send data back to the web page.
 
 Bridge components follow the principle of progressive enhancement: the web page works fully without the native shell, but when running inside a Hotwire Native app, bridge components enhance the experience with platform-native UI.
 
@@ -98,11 +97,11 @@ Standard events:
 
 ### JavaScript Side: BridgeComponent Base Class
 
-Create JavaScript bridge components by extending the `BridgeComponent` class from `@hotwired/strada`:
+Create JavaScript bridge components by extending the `BridgeComponent` class from `@hotwired/hotwire-native-bridge`:
 
 ```javascript
-// app/javascript/bridge/form_submit_component.js
-import { BridgeComponent } from "@hotwired/strada"
+// app/javascript/controllers/bridge/form_submit_controller.js
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "form-submit"
@@ -131,25 +130,26 @@ The `BridgeComponent` class extends Stimulus `Controller`, so it has the same li
 
 ### Registering JavaScript Components
 
-Register all bridge components with the Strada bridge in your application entry point:
+Bridge components are Stimulus controllers -- register them like any other controller.
+With importmap-rails or esbuild autoloading, controllers in `app/javascript/controllers/bridge/`
+are discovered automatically via the `bridge--` prefix.
+
+Manual registration (if not using autoloading):
 
 ```javascript
 // app/javascript/application.js
 import { Application } from "@hotwired/stimulus"
-import { Bridge } from "@hotwired/strada"
-import FormSubmitComponent from "./bridge/form_submit_component"
-import MenuComponent from "./bridge/menu_component"
-import ShareComponent from "./bridge/share_component"
-import AlertComponent from "./bridge/alert_component"
+import FormSubmitController from "./controllers/bridge/form_submit_controller"
+import MenuController from "./controllers/bridge/menu_controller"
+import ShareController from "./controllers/bridge/share_controller"
+import AlertController from "./controllers/bridge/alert_controller"
 
-// Register Stimulus application
 const application = Application.start()
 
-// Register bridge components with Strada
-Bridge.register(FormSubmitComponent)
-Bridge.register(MenuComponent)
-Bridge.register(ShareComponent)
-Bridge.register(AlertComponent)
+application.register("bridge--form-submit", FormSubmitController)
+application.register("bridge--menu", MenuController)
+application.register("bridge--share", ShareController)
+application.register("bridge--alert", AlertController)
 ```
 
 In your HTML, use bridge components like Stimulus controllers with the `bridge` prefix:
@@ -225,23 +225,28 @@ final class FormSubmitComponent: BridgeComponent {
 
 ### Registering iOS Components
 
-Register native bridge components with the Hotwire configuration:
+Register native bridge components with Hotwire:
 
 ```swift
-// AppDelegate.swift or SceneDelegate.swift
+// AppDelegate.swift
 import HotwireNative
 
-func configureBridgeComponents() {
-    Hotwire.config.bridgeComponentTypes = [
-        FormSubmitComponent.self,
-        MenuComponent.self,
-        ShareComponent.self,
-        AlertComponent.self
-    ]
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Hotwire.registerBridgeComponents([
+            FormSubmitComponent.self,
+            MenuComponent.self,
+            ShareComponent.self,
+            AlertComponent.self
+        ])
+        return true
+    }
 }
 ```
 
-Call this before any web view loads, typically in `application(_:didFinishLaunchingWithOptions:)` or at the beginning of `scene(_:willConnectTo:options:)`.
+Call this before any web view loads.
 
 ### Android Side: BridgeComponent Class
 
@@ -348,23 +353,20 @@ turbo_native_app?  # Returns true when user agent contains "Turbo Native"
 **Client-side (JavaScript):**
 
 ```javascript
-// Check if Strada bridge is available
-const isNative = window.Strada !== undefined
-
-// Or check user agent
-const isTurboNative = navigator.userAgent.includes("Turbo Native")
+// Check user agent for Turbo Native
+const isNative = navigator.userAgent.includes("Turbo Native")
 ```
 
 **In bridge components:**
 
-Bridge components only run when the Strada bridge is present, so you do not need to check. The `connect()` method is only called when the native app is hosting the web view.
+Bridge components only run when the native bridge is present, so you do not need to check. The `connect()` method is only called when the native app is hosting the web view.
 
 ### Lifecycle Management
 
-Bridge components follow the Stimulus lifecycle, enhanced with Strada-specific hooks:
+Bridge components follow the Stimulus lifecycle, enhanced with bridge-specific hooks:
 
 ```javascript
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "my-component"
@@ -414,7 +416,7 @@ final class MyComponent: BridgeComponent {
 
 ```javascript
 // JavaScript: Declares what it needs, sends structured data
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "share"
@@ -483,7 +485,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     func setupWebView() {
         let config = WKWebViewConfiguration()
 
-        // Injecting raw message handlers bypasses the Strada lifecycle
+        // Injecting raw message handlers bypasses the bridge lifecycle
         config.userContentController.add(self, name: "shareHandler")
         config.userContentController.add(self, name: "menuHandler")
         config.userContentController.add(self, name: "cameraHandler")
@@ -519,4 +521,4 @@ document.querySelector("#share-btn").addEventListener("click", () => {
 })
 ```
 
-This approach bypasses Strada entirely: no structured message format, no lifecycle management, no cross-platform support, no reply mechanism from native to web, and native UI persists after page navigation because there is no disconnect handling. Each platform requires completely different JavaScript code.
+This approach bypasses the bridge framework entirely: no structured message format, no lifecycle management, no cross-platform support, no reply mechanism from native to web, and native UI persists after page navigation because there is no disconnect handling. Each platform requires completely different JavaScript code.

@@ -2,7 +2,6 @@
 title: "Bridge Component Cookbook"
 categories:
   - hotwire-native
-  - strada
   - bridge
   - examples
 tags:
@@ -50,7 +49,7 @@ description: >-
 
 This cookbook provides four complete bridge component implementations. Each component follows the same pattern:
 
-1. **JavaScript bridge component** (extends `BridgeComponent` from `@hotwired/strada`): Runs in the web view, sends data to native, receives replies.
+1. **JavaScript bridge component** (extends `BridgeComponent` from `@hotwired/hotwire-native-bridge`): Runs in the web view, sends data to native, receives replies.
 2. **Swift native handler** (extends `BridgeComponent` from `HotwireNative`): Presents iOS-native UI, sends replies back to JavaScript.
 3. **Kotlin native handler** (extends `BridgeComponent` from `dev.hotwire.core`): Presents Android-native UI, sends replies back to JavaScript.
 4. **HTML markup**: The ERB template with data attributes that wire everything together.
@@ -67,7 +66,7 @@ Every component follows the progressive enhancement principle: the web version w
 
 ```javascript
 // app/javascript/bridge/share_component.js
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "share"
@@ -302,7 +301,7 @@ class ShareComponent(
 
 ```javascript
 // app/javascript/bridge/menu_component.js
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "menu"
@@ -538,7 +537,7 @@ class MenuComponent(
 
 ```javascript
 // app/javascript/bridge/form_submit_component.js
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "form-submit"
@@ -771,7 +770,7 @@ class FormSubmitComponent(
 
 ```javascript
 // app/javascript/bridge/alert_component.js
-import { BridgeComponent } from "@hotwired/strada"
+import { BridgeComponent, BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "alert"
@@ -1013,30 +1012,37 @@ Register all bridge components in each platform:
 
 **JavaScript (shared across web and native):**
 
+Bridge components are Stimulus controllers -- register them like any other controller.
+With importmap-rails or esbuild autoloading, controllers in `app/javascript/controllers/bridge/`
+register automatically via the `bridge--` prefix.
+
+Manual registration:
+
 ```javascript
 // app/javascript/application.js
-import { Bridge } from "@hotwired/strada"
-import ShareComponent from "./bridge/share_component"
-import MenuComponent from "./bridge/menu_component"
-import FormSubmitComponent from "./bridge/form_submit_component"
-import AlertComponent from "./bridge/alert_component"
+import { Application } from "@hotwired/stimulus"
+import ShareController from "./controllers/bridge/share_controller"
+import MenuController from "./controllers/bridge/menu_controller"
+import FormSubmitController from "./controllers/bridge/form_submit_controller"
+import AlertController from "./controllers/bridge/alert_controller"
 
-Bridge.register(ShareComponent)
-Bridge.register(MenuComponent)
-Bridge.register(FormSubmitComponent)
-Bridge.register(AlertComponent)
+const application = Application.start()
+application.register("bridge--share", ShareController)
+application.register("bridge--menu", MenuController)
+application.register("bridge--form-submit", FormSubmitController)
+application.register("bridge--alert", AlertController)
 ```
 
 **iOS (Swift):**
 
 ```swift
 // Configure in AppDelegate or SceneDelegate
-Hotwire.config.bridgeComponentTypes = [
+Hotwire.registerBridgeComponents([
     ShareComponent.self,
     MenuComponent.self,
     FormSubmitComponent.self,
     AlertComponent.self
-]
+])
 ```
 
 **Android (Kotlin):**

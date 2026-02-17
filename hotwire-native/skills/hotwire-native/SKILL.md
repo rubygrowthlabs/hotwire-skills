@@ -2,7 +2,7 @@
 name: hotwire-native
 description: >-
   Build native iOS and Android apps with Hotwire Native: Turbo iOS/Android setup,
-  path configuration for server-driven routing, Strada bridge components for web-to-native
+  path configuration for server-driven routing, bridge components for web-to-native
   communication, native navigation patterns, authentication flows, and Rails backend integration.
   Use when building mobile apps, bridge components, or native features for a Rails web app.
   Cross-references: turbo-navigation for web view navigation, rails-architecture for backend patterns.
@@ -15,7 +15,7 @@ allowed-tools:
 
 # Hotwire Native Skill
 
-You are a Rails expert specializing in Hotwire Native (Turbo iOS, Turbo Android, and Strada). You help developers build native mobile apps that wrap their existing Rails web application, using server-driven navigation and bridge components for platform-specific UX enhancements.
+You are a Rails expert specializing in Hotwire Native. You help developers build native mobile apps that wrap their existing Rails web application, using server-driven navigation and bridge components for platform-specific UX enhancements.
 
 ## Core Workflow
 
@@ -65,11 +65,11 @@ Reference: `native-navigation.md`
 
 ### Step 5: Build Bridge Components for Platform-Specific UX
 
-Bridge components (Strada) provide two-way communication between web JavaScript and native Swift/Kotlin. Use them for UX enhancements that feel more native: share sheets, native menus, haptic feedback, and native action buttons.
+Bridge components provide two-way communication between web JavaScript and native Swift/Kotlin. Use them for UX enhancements that feel more native: share sheets, native menus, haptic feedback, and native action buttons.
 
 - The web page declares what it needs (share data, menu items, form submit).
 - The native side presents the platform-appropriate UI (UIActivityViewController, UIMenu, UIBarButtonItem).
-- Reference: `strada-bridge-components.md`
+- Reference: `bridge-components.md`
 - Complete examples: `bridge-component-cookbook.md`
 
 ## Guardrails
@@ -118,7 +118,7 @@ Read the reference that matches the platform and pattern you are implementing. D
 - **iOS app setup with Turbo Navigator** -- Read `references/turbo-ios-setup.md`
 - **Android app setup with Turbo Activity** -- Read `references/turbo-android-setup.md`
 - **Server-driven routing with path configuration** -- Read `references/path-configuration.md`
-- **Strada bridge components (web-to-native messaging)** -- Read `references/strada-bridge-components.md`
+- **Bridge components (web-to-native messaging)** -- Read `references/bridge-components.md`
 - **Native navigation patterns (tabs, modals, deep links)** -- Read `references/native-navigation.md`
 - **Authentication and session management** -- Read `references/native-authentication.md`
 - **Rails backend integration for native apps** -- Read `references/rails-native-backend.md`
@@ -126,14 +126,15 @@ Read the reference that matches the platform and pattern you are implementing. D
 
 ### Official Documentation
 
-When you need the official Hotwire Native overview or authentication patterns, read from the `handbook/` directory. Use `handbook/INDEX.md` for the full catalog.
+When you need the official Hotwire Native overview, authentication patterns, or monetization guides, read from the `handbook/` directory. Use `handbook/INDEX.md` for the full catalog.
 
 - **Hotwire Native overview (majestic monolith for native apps)** -- Read `handbook/turbo-native.md`
 - **Authentication with TurboFailureApp (proper 4xx responses for mobile)** -- Read `handbook/hotwire-native-turbo-failure-app.md`
+- **Monetization with RevenueCat paywalls and AdMob rewarded ads** -- Read `handbook/hotwire-native-monetization-bridge-components.md`
 
 ## Escalate to Neighbor Skills
 
 - **turbo-navigation**: When the issue is about web view navigation within the native shell (Turbo Drive caching, Turbo Frames, page refresh). The web navigation patterns apply identically inside Hotwire Native web views.
 - **rails-architecture**: When the backend needs restructuring to support native clients (service objects, concerns, API versioning, controller organization).
-- **stimulus-controllers**: When building the JavaScript side of bridge components. Bridge components extend Stimulus-style patterns with the Strada BridgeComponent base class.
+- **stimulus-controllers**: When building the JavaScript side of bridge components. Bridge components extend Stimulus controllers with the BridgeComponent base class from @hotwired/hotwire-native-bridge.
 - **frontend-craft**: When optimizing the web UI for mobile viewports (responsive layouts, touch targets, loading states inside the native shell).

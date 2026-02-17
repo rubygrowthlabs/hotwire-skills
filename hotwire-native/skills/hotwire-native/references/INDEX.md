@@ -1,19 +1,19 @@
 # Hotwire Native
 
-Build native iOS and Android apps powered by your Rails web application using Hotwire Native and Strada.
+Build native iOS and Android apps powered by your Rails web application using Hotwire Native.
 
 ## Hotwire Focus
 
 - Turbo iOS (hotwire-native-ios)
 - Turbo Android (hotwire-native-android)
-- Strada Bridge Components
+- Bridge Components
 
 ## Articles in this skill
 
 - [Turbo iOS Setup](turbo-ios-setup.md) - Setting up an iOS app with Hotwire Native: Xcode project configuration, Swift Package Manager dependency, TurboNavigator session management, WKWebView configuration with custom user agent, and SceneDelegate initialization.
 - [Turbo Android Setup](turbo-android-setup.md) - Setting up an Android app with Hotwire Native: Gradle dependency, TurboActivity and TurboSessionNavHostFragment configuration, WebView setup with custom user agent, navigation graph, and back navigation handling.
 - [Path Configuration](path-configuration.md) - Server-driven routing with JSON path configuration: URL pattern matching, presentation styles (push, modal, pop, replace, none), context management, pull-to-refresh per path, Rails controller endpoint, and caching strategies.
-- [Strada Bridge Components](strada-bridge-components.md) - Two-way web-to-native communication with Strada: JavaScript BridgeComponent class, Swift and Kotlin native handlers, message format and lifecycle, platform detection, and component registration patterns.
+- [Bridge Components](bridge-components.md) - Two-way web-to-native communication: JavaScript BridgeComponent class, Swift and Kotlin native handlers, message format and lifecycle, platform detection, and component registration patterns.
 - [Native Navigation](native-navigation.md) - Native navigation patterns for Hotwire Native apps: tab bar navigation with multiple sessions, native screens for platform APIs, bottom sheets and modals, pull-to-refresh, external URL handling, deep links, and navigation bar customization.
 - [Native Authentication](native-authentication.md) - Authentication in Hotwire Native apps: cookie-based session management in WKWebView, cookie sharing between web view and native HTTP client, Keychain persistence, login flow with 401 detection, session expiry handling, and biometric authentication integration.
 - [Rails Native Backend](rails-native-backend.md) - Rails backend patterns for Hotwire Native: turbo_native_app? detection, conditional rendering for native vs web, path configuration endpoint, form submission patterns, native-specific Turbo Stream responses, and app version enforcement.

@@ -569,7 +569,7 @@ func visitableDidRender(visitable: Visitable) {
     // Customize further:
     visitable.visitableViewController.navigationItem.largeTitleDisplayMode = .never
 
-    // Add right bar button from bridge component (see strada-bridge-components.md)
+    // Add right bar button from bridge component (see bridge-components.md)
 }
 ```
 
