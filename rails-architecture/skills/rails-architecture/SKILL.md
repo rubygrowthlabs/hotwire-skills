@@ -5,11 +5,7 @@ description: >-
   REST resource mapping, Minitest with fixtures, and Rails 8 defaults (Solid Queue/Cache/Cable).
   Use when writing Ruby/Rails code, reviewing architecture, or discussing DHH/37signals patterns.
   Cross-references: turbo-navigation for navigation, forms-validation for forms, hotwire-native for mobile.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Rails Architecture

@@ -6,11 +6,7 @@ description: >-
   with morphing, and frame loading spinners. Use when improving perceived performance,
   adding animations, or structuring CSS.
   Cross-references: stimulus-controllers for interactive animations, turbo-streams for morphing integration.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Frontend Craft Skill

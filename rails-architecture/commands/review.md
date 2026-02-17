@@ -1,3 +1,8 @@
+---
+description: Review code against DHH-style Rails 8 architecture principles
+disable-model-invocation: true
+---
+
 # /rails:review
 
 Review code against DHH-style Rails 8 architecture principles.

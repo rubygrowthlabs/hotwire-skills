@@ -1,6 +1,5 @@
 {
   "name": "turbo-streams",
-  "version": "1.1.0",
   "description": "Turbo Streams for real-time updates: inline streams, custom actions, broadcasting, Turbo 8 morphing, optimistic UI, and view transitions.",
   "author": {
     "name": "Ruby Growth Labs",

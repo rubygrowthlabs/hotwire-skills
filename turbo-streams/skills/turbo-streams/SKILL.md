@@ -5,11 +5,7 @@ description: >-
   broadcasting over WebSocket, Turbo 8 morphing, optimistic UI, and list animations with
   view transitions. Use when adding real-time updates, broadcasting, or morphing.
   Cross-references: stimulus-controllers for client-side orchestration, hotwire-native for mobile broadcasting.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Turbo Streams

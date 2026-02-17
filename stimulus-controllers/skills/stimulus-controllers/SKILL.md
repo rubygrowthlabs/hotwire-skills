@@ -5,11 +5,7 @@ description: >-
   targets and target callbacks, outlets API, action parameters, keyboard events, and
   production-ready controller patterns. Use when building Stimulus controllers or JavaScript behavior.
   Cross-references: forms-validation for form controllers, frontend-craft for animation controllers.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Stimulus Controllers Skill

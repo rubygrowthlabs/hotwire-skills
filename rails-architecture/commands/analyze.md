@@ -1,3 +1,8 @@
+---
+description: Scan a Rails codebase for simplification opportunities toward DHH-style architecture
+disable-model-invocation: true
+---
+
 # /rails:analyze
 
 Scan an entire Rails codebase for simplification opportunities toward DHH-style architecture.

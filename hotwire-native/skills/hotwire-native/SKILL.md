@@ -6,11 +6,7 @@ description: >-
   communication, native navigation patterns, authentication flows, and Rails backend integration.
   Use when building mobile apps, bridge components, or native features for a Rails web app.
   Cross-references: turbo-navigation for web view navigation, rails-architecture for backend patterns.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Hotwire Native Skill

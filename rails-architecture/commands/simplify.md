@@ -1,3 +1,8 @@
+---
+description: Plan incremental refactoring toward DHH-style Rails architecture
+disable-model-invocation: true
+---
+
 # /rails:simplify
 
 Plan incremental refactoring toward DHH-style Rails architecture. Each step is independently valuable and reversible.

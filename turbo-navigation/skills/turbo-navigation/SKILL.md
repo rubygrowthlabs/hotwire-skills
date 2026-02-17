@@ -5,11 +5,7 @@ description: >-
   tabbed navigation, pagination, lazy loading, faceted search, and Turbo 8 page refresh.
   Use when building navigation, tabs, pagination, or lazy-loaded content.
   Cross-references: turbo-streams for real-time updates, frontend-craft for loading states.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Turbo Navigation Skill

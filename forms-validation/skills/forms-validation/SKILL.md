@@ -5,11 +5,7 @@ description: >-
   typeahead search, external form controls, and the form submission lifecycle (422/303 responses).
   Use when building interactive forms, inline editing, or search.
   Cross-references: turbo-streams for real-time validation, stimulus-controllers for complex form behavior.
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - Task
+allowed-tools: Read, Grep, Glob, Task
 ---
 
 # Forms & Validation Skill
