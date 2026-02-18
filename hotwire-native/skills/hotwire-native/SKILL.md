@@ -128,6 +128,7 @@ When you need the official Hotwire Native overview, authentication patterns, or 
 - **Authentication with TurboFailureApp (proper 4xx responses for mobile)** -- Read `handbook/hotwire-native-turbo-failure-app.md`
 - **Monetization with RevenueCat paywalls and AdMob rewarded ads** -- Read `handbook/hotwire-native-monetization-bridge-components.md`
 - **Native screens with SwiftUI (UIHostingController, path config routing, MVVM)** -- Read `handbook/hotwire-native-swiftui-native-screens.md`
+- **Native screens with Jetpack Compose (HotwireFragment, Google Maps, MVVM)** -- Read `handbook/hotwire-native-jetpack-compose-native-screens.md`
 
 ## Escalate to Neighbor Skills
 
