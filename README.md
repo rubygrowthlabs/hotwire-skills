@@ -1,4 +1,4 @@
-# rgl-rails
+# hotwire-skills
 
 Rails 8 + Full Hotwire Stack skills plugin for Claude Code by [Ruby Growth Labs](https://rubygrowthlabs.com).
 
@@ -34,22 +34,22 @@ The `references/` layer tells you the right pattern. The `handbook/` layer gives
 
 ### From Marketplace (Recommended)
 
-Add the rgl-rails marketplace, then install the plugins you want:
+Add the hotwire-skills marketplace, then install the plugins you want:
 
 ```
-/plugin marketplace add rubygrowthlabs/rgl-rails
+/plugin marketplace add rubygrowthlabs/hotwire-skills
 ```
 
 Then install all 7 plugins:
 
 ```
-/plugin install rails-architecture@rgl-rails
-/plugin install turbo-navigation@rgl-rails
-/plugin install turbo-streams@rgl-rails
-/plugin install stimulus-controllers@rgl-rails
-/plugin install forms-validation@rgl-rails
-/plugin install hotwire-native@rgl-rails
-/plugin install frontend-craft@rgl-rails
+/plugin install rails-architecture@hotwire-skills
+/plugin install turbo-navigation@hotwire-skills
+/plugin install turbo-streams@hotwire-skills
+/plugin install stimulus-controllers@hotwire-skills
+/plugin install forms-validation@hotwire-skills
+/plugin install hotwire-native@hotwire-skills
+/plugin install frontend-craft@hotwire-skills
 ```
 
 Or browse and install interactively — run `/plugin` and go to the **Discover** tab.
@@ -61,10 +61,10 @@ Add this to your project's `.claude/settings.json` so teammates get the marketpl
 ```json
 {
   "extraKnownMarketplaces": {
-    "rgl-rails": {
+    "hotwire-skills": {
       "source": {
         "source": "github",
-        "repo": "rubygrowthlabs/rgl-rails"
+        "repo": "rubygrowthlabs/hotwire-skills"
       }
     }
   }
@@ -74,7 +74,7 @@ Add this to your project's `.claude/settings.json` so teammates get the marketpl
 ### Local Development / Testing
 
 ```bash
-claude --plugin-dir ./path/to/rgl-rails
+claude --plugin-dir ./path/to/hotwire-skills
 ```
 
 Load a local copy for development or testing changes before publishing.

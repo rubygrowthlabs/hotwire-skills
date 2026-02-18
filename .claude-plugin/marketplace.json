@@ -1,5 +1,5 @@
 {
-  "name": "rgl-rails",
+  "name": "hotwire-skills",
   "owner": {
     "name": "Ruby Growth Labs",
     "url": "https://github.com/rubygrowthlabs"
@@ -17,7 +17,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["rails", "architecture", "dhh", "controllers", "models", "concerns", "minitest"],
       "source": "./rails-architecture"
     },
@@ -29,7 +29,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["turbo", "frames", "drive", "navigation", "pagination", "lazy-loading"],
       "source": "./turbo-navigation"
     },
@@ -41,7 +41,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["turbo-streams", "broadcasting", "morphing", "real-time", "websocket"],
       "source": "./turbo-streams"
     },
@@ -53,7 +53,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["stimulus", "controllers", "javascript", "lifecycle", "values", "targets"],
       "source": "./stimulus-controllers"
     },
@@ -65,7 +65,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["forms", "validation", "inline-edit", "typeahead", "modal"],
       "source": "./forms-validation"
     },
@@ -77,7 +77,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["hotwire-native", "turbo-ios", "turbo-android", "strada", "bridge-components", "mobile"],
       "source": "./hotwire-native"
     },
@@ -89,7 +89,7 @@
         "name": "Ruby Growth Labs",
         "url": "https://github.com/rubygrowthlabs"
       },
-      "homepage": "https://github.com/rubygrowthlabs/rgl-rails",
+      "homepage": "https://github.com/rubygrowthlabs/hotwire-skills",
       "tags": ["css", "ux", "loading", "transitions", "animations", "frontend"],
       "source": "./frontend-craft"
     }

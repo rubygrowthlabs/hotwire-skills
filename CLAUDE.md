@@ -2,7 +2,7 @@
 
 ## Plugin Overview
 
-rgl-rails is a Claude Code skills plugin covering Rails 8 + the full Hotwire stack (Turbo + Stimulus + Native). It contains 7 domain-scoped skills with ~45 reference articles, slash commands, and the only Hotwire Native coverage in the ecosystem.
+hotwire-skills is a Claude Code skills plugin covering Rails 8 + the full Hotwire stack (Turbo + Stimulus + Native). It contains 7 domain-scoped skills with ~45 reference articles, slash commands, and the only Hotwire Native coverage in the ecosystem.
 
 ## Skill Architecture
 
@@ -19,7 +19,7 @@ Skills also have two knowledge layers:
 ## Directory Layout
 
 ```
-rgl-rails/
+hotwire-skills/
 ├── rails-architecture/   # Hub skill with commands and agent
 │   └── handbook/          # Rails 8 CLAUDE.md template
 ├── turbo-navigation/     # Turbo Drive + Frames navigation patterns
