@@ -1,6 +1,8 @@
 # hotwire-skills
 
-Rails 8 + Full Hotwire Stack skills plugin for Claude Code by [Ruby Growth Labs](https://rubygrowthlabs.com).
+Rails 8 + Full Hotwire Stack [skills plugin](https://code.claude.com/docs/en/skills) for Claude Code by [Ruby Growth Labs](https://rubygrowthlabs.com).
+
+Claude Code skills follow the Agent Skills open standard, which works across multiple AI tools. Claude Code extends the standard with additional features like invocation control, subagent execution, and dynamic context injection.
 
 ## What's Included
 

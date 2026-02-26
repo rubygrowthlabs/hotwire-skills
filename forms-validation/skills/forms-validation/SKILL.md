@@ -1,10 +1,7 @@
 ---
 name: forms-validation
 description: >-
-  Handle forms with Hotwire: inline editing with Turbo Frames, modal forms with validation,
-  typeahead search, external form controls, and the form submission lifecycle (422/303 responses).
-  Use when building interactive forms, inline editing, or search.
-  Cross-references: turbo-streams for real-time validation, stimulus-controllers for complex form behavior.
+  Handle forms with Hotwire: inline editing with Turbo Frames, modal forms with validation, typeahead search, external form controls, and the form submission lifecycle (422/303 responses). Use when building interactive forms, inline editing, or search. Cross-references: turbo-streams for real-time validation, stimulus-controllers for complex form behavior.
 allowed-tools: Read, Grep, Glob, Task
 ---
 
